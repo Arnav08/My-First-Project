@@ -1,3 +1,20 @@
+<div class='container'>
 Welcome {{name}} to App!!
 <br>
-You can manage your ToDos <a routerLink="/todos">Here</a>
+ You can manage your ToDos <a routerLink="/todos">Here</a>
+</div>
+
+<!-- <div class='container'>
+    welcome to customized message
+    <button (click)="getWelcomeMessage()" class="btn btn-success" > Get welcome message</button>
+</div> -->
+
+<div class='container'>
+    welcome to customized message
+    <button (click)="getWelcomeMessageForPathParam()" class="btn btn-success" > Get welcome message</button>
+</div>
+
+<div class='container' *ngIf="welcomeMsgFromService">
+    <h2> Welcome to customized welcome message</h2>
+    {{welcomeMsgFromService}}
+</div>
